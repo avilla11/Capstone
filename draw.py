@@ -35,20 +35,22 @@ def draw(event,x,y,flags,params):
 
 
 def openDraw():
-    # Making Window For The Image
-    cv2.namedWindow("Window")
+        try:
+            # Making Window For The Image
+            cv2.namedWindow("Window")
 
-    # Adding Mouse CallBack Event
-    cv2.setMouseCallback("Window",draw)
+            # Adding Mouse CallBack Event
+            cv2.setMouseCallback("Window",draw)
 
-    # Starting The Loop So Image Can Be Shown
-    while(True):
+            # Starting The Loop So Image Can Be Shown
+            while(True):
 
-        cv2.imshow("Window",image)
+                cv2.imshow("Window",image)
 
-        if cv2.waitKey(20) & 0xFF == ord('q'):
-            break
+                if cv2.waitKey(20) & 0xFF == ord('q'):
+                    break
 
-    cv2.destroyAllWindows()
-
-openDraw()
+            cv2.destroyAllWindows()
+        except:
+            print()
+    

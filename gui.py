@@ -6,6 +6,8 @@ dt1 = crater.Detection()
 
 import PySimpleGUI as sg
 
+sg.theme('DarkPurple')
+
 """def getFilePath():
     #sg.theme('Dark Blue 3')  # please make your creations colorful
 
@@ -19,12 +21,13 @@ import PySimpleGUI as sg
     window.close() """
 
 def func():
-    print("Hola")
+    print("")
 
 layout = [[sg.Text('To run crater detection, press the open image and run prediction button')],
           [sg.Button('Open Image and Run Prediction'), sg.Button('Detect on Sample Image'), sg.Button('Draw'), sg.Exit()] ]
 
 window = sg.Window('Crater Detector', layout, font=("Roboto", 12), size=(1000, 400), finalize=True)
+
 
 while True:             # Event Loop
     event, values = window.Read()
